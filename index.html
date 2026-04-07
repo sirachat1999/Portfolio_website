@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio ของฉัน</title>
+
+    <!-- 1. นำเข้า Bootstrap 5 CSS ผ่าน CDN เพื่อใช้จัด Layout และ Components ต่างๆ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- นำเข้า FontAwesome สำหรับใช้ไอคอนต่างๆ เช่น Facebook, GitHub -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ========================================== -->
+    <!-- ส่วนของ CSS (ตามปกติจะอยู่ในไฟล์ style.css) -->
+    <!-- ========================================== -->
+   <link rel="stylesheet" href="style.css"> 
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70" tabindex="0">
+
+    <!-- ========================================== -->
+    <!-- ส่วนของ HTML: โครงสร้างเนื้อหาหน้าเว็บ          -->
+    <!-- ========================================== -->
+
+    <!-- Navbar: แถบเมนูด้านบน (ใช้คลาส Bootstrap) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#hero">MyPortfolio</a>
+            
+            <!-- ปุ่มสำหรับมือถือ (Hamburger menu) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- ลิงก์เมนูต่างๆ -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">เกี่ยวกับฉัน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">ผลงาน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">ติดต่อ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: ส่วนแนะนำตัวหน้าแรก -->
+    <section id="hero" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">สวัสดี! ฉันคือ <span id="typing-text">นักพัฒนาเว็บไซต์</span></h1>
+            <p class="lead mb-5">ยินดีต้อนรับสู่พื้นที่แสดงผลงานและทักษะของฉัน</p>
+            <a href="#projects" class="btn btn-light btn-lg rounded-pill px-5 shadow">ดูผลงานของฉัน</a>
+        </div>
+    </section>
+
+    <!-- About Section: ส่วนเกี่ยวกับฉัน และทักษะ -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 fw-bold">เกี่ยวกับฉัน</h2>
+            <div class="row align-items-center">
+                <!-- คอลัมน์ซ้าย: รูปโปรไฟล์ (ใช้ Placeholder หากยังไม่มีรูป) -->
+                <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                    <img src="https://via.placeholder.com/300" alt="" class="profile-img">
+                </div>
+                <!-- คอลัมน์ขวา: คำอธิบายและ Progress bar ทักษะ -->
+                <div class="col-lg-7">
+                    <h3 class="mb-3">นักพัฒนา Front-End ที่รักในการสร้างสรรค์</h3>
+                    <p class="text-muted mb-4">
+                        ฉันมีความหลงใหลในการเขียนโค้ดและสร้างประสบการณ์ที่ดีให้กับผู้ใช้งานบนหน้าเว็บ ฉันเรียนรู้เทคโนโลยีใหม่ๆ อยู่เสมอและพร้อมที่จะเผชิญกับความท้าทายใหม่ๆ ในสายงานนี้
+                    </p>
+                    
+                    <h5 class="mb-3">ทักษะความสามารถ (Skills)</h5>
+                    <!-- HTML Progress -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>HTML5 / CSS3</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <!-- JavaScript Progress -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <!-- Bootstrap Progress -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Bootstrap 5</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section: ส่วนแสดงผลงาน -->
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 fw-bold">ผลงานของฉัน</h2>
+            <div class="row g-4">
+                
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="card project-card h-100 rounded-3 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">เว็บไซต์ E-Commerce</h5>
+                            <p class="card-text text-muted">ออกแบบและพัฒนาหน้าร้านค้าออนไลน์ด้วย HTML, CSS และ JavaScript รองรับการแสดงผลบนมือถือ</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card project-card h-100 rounded-3 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">ระบบจัดการสต็อก</h5>
+                            <p class="card-text text-muted">สร้าง Dashboard สำหรับแสดงข้อมูลสรุปยอดขายและสินค้าคงคลัง ใช้ Bootstrap อย่างเต็มรูปแบบ</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="card project-card h-100 rounded-3 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">แอปพลิเคชันจดบันทึก</h5>
+                            <p class="card-text text-muted">Web App สำหรับสร้าง อ่าน อัปเดต และลบโน้ต เขียนด้วย Vanilla JavaScript เน้นการทำงานแบบรวดเร็ว</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section: ส่วนฟอร์มติดต่อ -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 fw-bold">ติดต่อฉัน</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    
+                    <!-- กล่องข้อความแจ้งเตือน (ซ่อนไว้ก่อน จะแสดงด้วย JS เมื่อส่งฟอร์ม) -->
+                    <div id="successMessage" class="alert alert-success d-none text-center" role="alert">
+                        <i class="fas fa-check-circle me-2"></i> ข้อความของคุณถูกส่งเรียบร้อยแล้ว! ขอบคุณครับ
+                    </div>
+
+                    <div class="card shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4 p-md-5">
+                            <!-- ฟอร์มติดต่อ -->
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="nameInput" class="form-label">ชื่อของคุณ</label>
+                                    <input type="text" class="form-control" id="nameInput" required placeholder="ใส่ชื่อของคุณ">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailInput" class="form-label">อีเมล</label>
+                                    <input type="email" class="form-control" id="emailInput" required placeholder="name@example.com">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="messageInput" class="form-label">ข้อความ</label>
+                                    <textarea class="form-control" id="messageInput" rows="4" required placeholder="พิมพ์ข้อความที่ต้องการส่งถึงฉัน..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2 rounded-pill fw-bold">ส่งข้อความ</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: ส่วนท้ายเว็บ -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="mb-3">
+                <a href="#" class="text-white me-3 fs-4"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3 fs-4"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-white fs-4"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2024 MyPortfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ปุ่มเลื่อนกลับขึ้นบนสุด -->
+    <button id="backToTopBtn" class="btn btn-primary rounded-circle shadow" title="กลับขึ้นบนสุด">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 2. นำเข้า Bootstrap Bundle JS (รวม Popper.js ไว้แล้ว) สำคัญมากสำหรับการทำงานของเมนูมือถือ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
